@@ -1,14 +1,14 @@
 {
   "name": "clawdbot-online",
   "version": "1.0.0",
-  "description": "Clawdbot deployed online for job automation",
-  "main": "server.js",
+  "description": "Clawdbot deployed online",
+  "dependencies": {
+    "clawdbot": "latest"
+  },
   "scripts": {
-    "start": "node server.js",
-    "install-clawdbot": "npm install -g clawdbot"
+    "start": "clawdbot gateway --port $PORT --host 0.0.0.0"
   },
   "engines": {
     "node": "22.x"
-  },
-  "dependencies": {}
+  }
 }

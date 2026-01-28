@@ -1,8 +1,8 @@
 # Use official Node.js image
 FROM node:22-slim
 
-# Install system updates
-RUN apt-get update && apt-get install -y curl
+# Install system updates and dependencies (git is required for installation)
+RUN apt-get update && apt-get install -y curl git python3 make g++
 
 # Set working directory
 WORKDIR /app
